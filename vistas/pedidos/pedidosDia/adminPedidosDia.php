@@ -6,7 +6,7 @@
                 <div class="col-sm-8">
                     <div class="box">
                         <div class="box-header">
-                            <h2>Pedidos Yacumama - Registro completo</h2>
+                            <h2>Pedidos Yacumama - Registro del día</h2>
                         </div>
                         <table class="table table-striped b-t">
                             <thead>
@@ -22,7 +22,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($this->pedidos->Listar() as $pedido) : ?>
+                                <?php foreach ($this->pedidos->ListarPedidosDia(0) as $pedido) : ?>
                                     <tr>
                                         <td><?php echo $pedido->pedido_id ?></td>
                                         <td><?php echo $pedido->pedido_date ?></td>
@@ -45,7 +45,7 @@
 
             <div class="col-sm-6">
                 <a href="?c=users&a=RegistrarPedido" class="btn btn-primary" role="button" aria-pressed="true">Registrar Nuevo pedido</a>
-                <a href="?c=users&a=InterfazPedidosDia" class="btn btn-outline b-info text-info" role="button" aria-pressed="true">Visuailzar pedidos del día</a>
+                <a href="?c=users&a=InterfazPedidos" class="btn btn-outline b-info text-info" role="button" aria-pressed="true">Visuailzar Todos los pedidos</a>
             </div>
 
         </div>

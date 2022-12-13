@@ -136,6 +136,33 @@ class UsersControlador{
         }
     }
 
+    public function InterfazPedidosDia(){
+        $logged = $_SESSION['logged'];
+        if(!$logged){
+            echo "Ingreso no autorizado";
+            die();
+        }else{
+            $dni = strip_tags($_SESSION['user_dni']);
+            $usu=$this->perfil->ObtenerUsuario($dni);
+            if($usu->getUsers_rol()=="Administrador"){
+                require_once "vistas/admin/encabezadoAdmin.php";
+                require_once "vistas/pedidos/pedidosDia/adminPedidosDia.php";
+                require_once "vistas/admin/piePagAdmin.php";
+            }else if($usu->getUsers_rol()=="Cocinero"){
+                require_once "vistas/cocina/encabezadoCocina.php";
+                require_once "vistas/pedidos/pedidosDia/adminPedidosDia.php";
+                require_once "vistas/cocina/piePagCocina.php";
+            }else if($usu->getUsers_rol()=="Mesero"){
+                require_once "vistas/mesero/encabezadoMesero.php";
+                require_once "vistas/pedidos/pedidosDia/adminPedidosDia.php";
+                require_once "vistas/mesero/piePagMesero.php";
+            }else{
+                echo "Ingreso no autorizado";
+                die();
+            }
+        }
+    }
+
     public function DetallePedido(){
         $logged = $_SESSION['logged'];
         if(!$logged){

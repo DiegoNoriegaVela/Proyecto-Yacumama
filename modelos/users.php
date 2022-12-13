@@ -59,6 +59,18 @@ class User{
         }
     }
 
+    public function ListarPorRol($rol){
+        try{
+			 $this->pdo=database::Conectar();
+            $consulta=$this->pdo->prepare("SELECT * FROM users WHERE users_rol=?;");
+            $consulta->execute(array($rol));
+			$this->pdo=null;
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage()); 
+        }
+    }
+
 	public function ObtenerUsuarioLogin($dni,$contra){
         try{
 			$this->pdo=database::Conectar();

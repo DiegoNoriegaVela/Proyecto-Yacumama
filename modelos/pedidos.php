@@ -76,10 +76,22 @@ class Pedido{
         }
     }
 
+    public function ListarPedidosDia($dia){
+        try{
+			 $this->pdo=database::Conectar();
+            $consulta=$this->pdo->prepare("SELECT * FROM pedidos AS p WHERE DAY(p.pedido_date)=DAY(DATE_SUB(NOW(),INTERVAL ? DAY));");
+            $consulta->execute(array($dia));
+			$this->pdo=null;
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage()); 
+        }
+    }
+
     public function ListarPendientes(){
         try{
 			 $this->pdo=database::Conectar();
-            $consulta=$this->pdo->prepare("SELECT * FROM pedidos WHERE pedido_estado!='Terminado';");
+            $consulta=$this->pdo->prepare("SELECT * FROM pedidos AS p WHERE pedido_estado!='Terminado' AND DAY(p.pedido_date)=DAY(NOW());");
             $consulta->execute();
 			$this->pdo=null;
             return $consulta->fetchAll(PDO::FETCH_OBJ);
@@ -91,7 +103,7 @@ class Pedido{
     public function ListarTerminados(){
         try{
 			 $this->pdo=database::Conectar();
-            $consulta=$this->pdo->prepare("SELECT * FROM pedidos WHERE pedido_estado='Terminado';");
+            $consulta=$this->pdo->prepare("SELECT * FROM pedidos AS p WHERE pedido_estado='Terminado' AND DAY(p.pedido_date)=DAY(NOW());");
             $consulta->execute();
 			$this->pdo=null;
             return $consulta->fetchAll(PDO::FETCH_OBJ);
@@ -99,6 +111,31 @@ class Pedido{
             die($e->getMessage()); 
         }
     }
+
+    public function ListarPagados(){
+        try{
+			 $this->pdo=database::Conectar();
+            $consulta=$this->pdo->prepare("SELECT * FROM pedidos AS p WHERE pedido_pago='Cancelado' AND DAY(p.pedido_date)=DAY(NOW());");
+            $consulta->execute();
+			$this->pdo=null;
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage()); 
+        }
+    }
+
+    public function ListarNoPagados(){
+        try{
+			 $this->pdo=database::Conectar();
+            $consulta=$this->pdo->prepare("SELECT * FROM pedidos AS p WHERE pedido_pago!='Cancelado' AND DAY(p.pedido_date)=DAY(NOW());");
+            $consulta->execute();
+			$this->pdo=null;
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage()); 
+        }
+    }
+
 
     public function ObtenerPedido($id){
         try{
