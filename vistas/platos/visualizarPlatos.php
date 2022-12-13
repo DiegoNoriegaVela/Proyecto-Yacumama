@@ -21,7 +21,7 @@
                             <tbody>
                                 <?php foreach ($this->platos->Listar() as $plato) : ?>
                                     <tr>
-                                        <td><img src="<?=$plato->plato_img?>"></td>
+                                        <td><img src="img/imgplatos/<?=$plato->plato_img?>"></td>
                                         <td><?php echo $plato->plato_id ?></td>
                                         <td><?php echo $plato->plato_nombre ?></td>
                                         <td><?php echo $plato->plato_descripcion ?></td>

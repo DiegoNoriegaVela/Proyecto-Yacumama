@@ -45,7 +45,7 @@
 
             <div class="col-sm-6">
                 <a href="?c=users&a=RegistrarPedido" class="btn btn-primary" role="button" aria-pressed="true">Registrar Nuevo pedido</a>
-                <a href="?c=users&a=InterfazPedidos" class="btn btn-outline b-info text-info" role="button" aria-pressed="true">Visuailzar Todos los pedidos</a>
+                <a href="?c=users&a=InterfazPedidos" class="btn btn-outline b-info text-info" role="button" aria-pressed="true">Visuailzar todos los pedidos</a>
             </div>
 
         </div>

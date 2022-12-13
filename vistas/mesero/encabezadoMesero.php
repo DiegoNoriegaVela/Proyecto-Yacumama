@@ -60,7 +60,7 @@
                             <li>
                                 <a href="?c=users&a=InterfazPedidos">
                                     <span class="nav-icon">
-                                        <i class="fa fa-cogs"></i>
+                                        <i class="fa fa-pencil-square-o"></i>
                                     </span>
                                     <span class="nav-text">Pedidos</span>
                                 </a>
@@ -69,7 +69,7 @@
                             <li>
                                 <a href="?c=users&a=InterfazMeseroPlatos">
                                     <span class="nav-icon">
-                                        <i class="fa fa-cogs"></i>
+                                        <i class="fa fa-cutlery"></i>
                                     </span>
                                     <span class="nav-text">Platos</span>
                                 </a>
@@ -112,15 +112,7 @@
 
                     <!-- BARRA DE LA DERECHA -->
                     <ul class="nav navbar-nav ml-auto flex-row">
-
-                        <li class="nav-item dropdown pos-stc-xs">
-                            <a class="nav-link mr-2" href data-toggle="dropdown">
-                                <i class="material-icons">&#xe7f5;</i>
-                                <span class="label label-sm up warn">3</span>
-                            </a>
-                            <div ui-include="'/views/blocks/dropdown.notification.html'"></div>
-                        </li>
-
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
                                 <span class="avatar w-32">
@@ -129,7 +121,7 @@
                                 </span>
                             </a>      
                             <div class="dropdown-menu dropdown-menu-overlay pull-right">
-                                <a class="dropdown-item" href="?c=users&a=CerrarSesion">Sign out</a>
+                                <a class="dropdown-item" href="?c=users&a=CerrarSesion">Cerrar Sesión</a>
                             </div>
                         </li>
 
