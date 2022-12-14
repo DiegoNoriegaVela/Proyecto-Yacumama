@@ -449,12 +449,16 @@ class UsersControlador{
         $imagen = "";
         $msg = "";
 
-        if( isset($_POST['nombre']) && isset($_POST['descripcion'])&& isset($_POST['precio'])&& isset($_POST['imagen'])) {
+        if( isset($_POST['nombre']) && isset($_POST['descripcion'])&& isset($_POST['precio'])) {
             //$id = strip_tags($_POST['id']);
             $nombre = strip_tags($_POST['nombre']);
             $descripcion = strip_tags($_POST['descripcion']);
             $precio = strip_tags($_POST['precio']);
             $imagen = strip_tags($_POST['imagen']);
+
+            $ruta_img = '/home/admin/web/yacumama.ml/public_html/img/imgplatos/'.basename($_FILES['imagen']['name']).'.jpg'; 
+            move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_img);
+            chmod($ruta_img, 0777);
 
             $p=new Plato();
             $p->setPlato_nombre($nombre);
@@ -520,7 +524,7 @@ class UsersControlador{
 
             $msg.="Pedido registrado correctamente";
 
-            echo '<meta http-equiv="refresh" content="2; url=?c=users&a=InterfazPedidos">';
+            echo '<meta http-equiv="refresh" content="2; url=?c=users&a=InterfazPedidosDia">';
 
         }else{
             $msg = "Complete el formulario";

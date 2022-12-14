@@ -30,7 +30,7 @@
                         </div>
                         <div class="clear">
                             <div class="text-muted">Día</div>
-                            <h4 class="m-0 text-md _600"><?=$subtotalDia[0]?></h4>
+                            <h4 class="m-0 text-md _600">S/.<?=$subtotalDia[0]?></h4>
                         </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="clear">
                             <div class="text-muted">Semana</div>
-                            <h4 class="m-0 text-md _600"><?=$subtotalSemana?></h4>
+                            <h4 class="m-0 text-md _600">S/.<?=$subtotalSemana?></h4>
                         </div>
                         </div>
                     </div>

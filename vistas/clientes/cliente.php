@@ -3,18 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <title>Inicio - Yacumama</title>
-  <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-  <link rel="apple-touch-icon" href="../assets/images/logo.png">
-  <meta name="apple-mobile-web-app-title" content="Flatkit">
   <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+  <link rel="shortcut icon" sizes="196x196" href="/img/logo-top.png">
 
   <!-- style -->
   <link rel="stylesheet" href="assets/animate.css/animate.min.css" type="text/css" />
@@ -25,29 +18,18 @@
 </head>
 <body>
   <header>
-      <nav class="navbar navbar-toggleable-sm navbar-md fixed-top white">
+      <nav class="navbar navbar-toggleable-sm navbar-md fixed-top light-green-900">
         <div class="container">
-          <a data-toggle="collapse" data-target="#navbar-1" class="navbar-item pull-right hidden-md-up m-a-0 m-l">
-            <i class="fa fa-bars"></i>
-          </a>
-
           <!-- brand -->
           <a class="navbar-brand md" href="#home" ui-scroll-to="home">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
-              <path d="M 4 4 L 44 4 L 44 44 Z" fill="#a88add" />
-              <path d="M 4 4 L 34 4 L 24 24 Z" fill="rgba(0,0,0,0.15)" />
-              <path d="M 4 4 L 24 4 L 4  44 Z" fill="#0cc2aa" />
-            </svg>
-
-            <span class="hidden-folded inline">UNMSM</span>
+            <img src="/img/logo-top.png">
           </a>
           <!-- / brand -->
 
           <!-- navbar collapse -->
-          <div class="collapse navbar-collapse text-center white" id="navbar-1">
+          <div class="collapse navbar-collapse text-center light-green-900" id="navbar-1">
             <!-- link and dropdown -->
-            <ul class="nav navbar-nav nav-active-border bottom b-primary ml-auto">
-
+            <ul class="nav navbar-nav nav-active-border bottom ml-auto">
               <li class="nav-item">
                 <a class="nav-link" href="https://yacumama.ml:8083/login" >
                   <span class="nav-text">Vesta Panel</span>
@@ -62,7 +44,7 @@
           <ul class="nav navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="?c=users&a=FormLoginUsuario">
-                <span class="btn btn-sm rounded accent text-u-c _700">
+                <span class="btn btn-sm rounded orange-800 text-u-c _700">
                   Iniciar Sesión
                 </span>
               </a>
@@ -72,6 +54,7 @@
         </div>
       </nav>
   </header>
+  
   <div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30" height="30" style="position:fixed; z-index:0; left:50%; top: 20%" class="animated fadeInDownBig">
         <path d="M 48 0 L 24 48 L 0 0 Z" fill="rgba(0,0,0,0.05)" />
