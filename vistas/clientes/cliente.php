@@ -84,7 +84,7 @@
 
 
     <div style="height: 250px;">
-      <img class="img-fluid" style="max-width:100%; height:800px;" src="./img/fondo.jpg">
+      <img class="img-fluid" style="max-width:auto; height:800px;" src="./img/fondo.jpg">
     </div>
 
     <div class="light row-col">
@@ -97,13 +97,14 @@
       </div>
     </div>
 
-    <div class="p-y-lg light">
-      <div class="container p-y-lg text-primary-hover">
-        <h2 class=" _700 l-s-n-1x m-b-md">Sobre <span class="text-success">Nosotros</span></h2>
-        <h5 class="m-y-lg text-muted">Yacumama, es una empresa turística pionera en el valle del Alto Mayo, con una extensión de 25 hectáreas, posee maravillosos paisajes y ambientes especialmente acondicionados para que disfrutes de la naturaleza en todo su explendor. En Yacumama puedes realizar diversas actividades: camping, paseos en bote motor, darte un refrescante baño en un río de aguas cristalinas, pesca deportiva, degustar exquisitos platos y bebidas de la región, etc.</h5>
+    <div class="light p-y-lg ng-scope">
+      <div class="padding ng-scop p-y-lg">
+        <div class="container p-y-lg text-primary-hover">
+          <h2 class=" _700 l-s-n-1x m-b-md">Sobre <span class="text-success">Nosotros</span></h2>
+          <h5 class="m-y-lg text-muted">Yacumama, es una empresa turística pionera en el valle del Alto Mayo, con una extensión de 25 hectáreas, posee maravillosos paisajes y ambientes especialmente acondicionados para que disfrutes de la naturaleza en todo su explendor. En Yacumama puedes realizar diversas actividades: camping, paseos en bote motor, darte un refrescante baño en un río de aguas cristalinas, pesca deportiva, degustar exquisitos platos y bebidas de la región, etc.</h5>
+        </div>
       </div>
     </div>
-
 
 
     <div class="white ng-scope">

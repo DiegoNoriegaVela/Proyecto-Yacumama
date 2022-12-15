@@ -3,7 +3,7 @@
         <div class="padding">
 
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-sm-8">
                     <div class="box">
                         <div class="box-header">
                             <h2>Platos Yacumama</h2>

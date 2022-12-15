@@ -4,18 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Proyecto Yacumama - Cocina</title>
-    <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- for ios 7 style, multi-resolution icon of 152x152 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-    <link rel="apple-touch-icon" href="/assets/images/logo.png">
-    <meta name="apple-mobile-web-app-title" content="Flatkit">
     <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="196x196" href="/assets/images/logo.png">
+    <link rel="shortcut icon" sizes="196x196" href="/img/logo-top.png">
 
     <!-- style -->
     <link rel="stylesheet" href="/assets/animate.css/animate.min.css" type="text/css" />
@@ -42,11 +35,7 @@
             <div class="left navside dark dk" data-layout="column">
                 <div class="navbar no-radius">
                     <!-- brand -->
-                    <a class="navbar-brand">
-                        <div ui-include="'/assets/images/logo.svg'"></div>
-                        <img src="/assets/images/logo.png" alt="." class="hide">
-                        <span class="hidden-folded inline">Yacumama</span>
-                    </a>
+                    <img src="/img/logo-top.png" alt=".">
                     <!-- / brand -->
                 </div>
                 <div class="hide-scroll" data-flex>
@@ -85,8 +74,8 @@
                                 <img src="/assets/images/a0.jpg" alt="..." class="w-40 img-circle">
                             </span>
                             <span class="clear hidden-folded p-x">
-                                <span class="block _500"><?php echo $usu->getUsers_nombres() ?> <?php echo $usu->getUsers_apellidos() ?></span>
-                                <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
+                                <span class="block _500"><?= $usu->getUsers_nombres() ?> <?= $usu->getUsers_apellidos() ?></span>
+                                <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i><?= $usu->getUsers_rol() ?></small>
                             </span>
                         </a>
                     </div>
@@ -141,11 +130,7 @@
             <div class="app-footer">
                 <div class="p-2 text-xs">
                     <div class="pull-right text-muted py-1">
-                        &copy; Copyright <strong>Flatkit</strong> <span class="hidden-xs-down">- Built with Love v1.1.3</span>
-                        <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
-                    </div>
-                    <div class="nav">
-                        <a class="nav-link" href="">About</a>
+                        Proyecto Gestión de Proyectos by <strong>Grupo 08</strong></span>
                     </div>
                 </div>
             </div>

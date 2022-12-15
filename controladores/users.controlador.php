@@ -580,7 +580,7 @@ class UsersControlador{
                 }else if($this->perfil->ObtenerUsuario($_SESSION['user_dni'])->getUsers_rol()=="Cocinero"){
                     echo '<meta http-equiv="refresh" content="2; url=?c=users&a=InterfazPedidos">';
                 }else if($this->perfil->ObtenerUsuario($_SESSION['user_dni'])->getUsers_rol()=="Mesero"){
-                    echo '<meta http-equiv="refresh" content="2; url=?c=users&a=InterfazPedidos">';
+                    echo '<meta http-equiv="refresh" content="2; url=?c=users&a=InterfazPedidosDia">';
                 }
             }else{
                 $msg .= "Acceso denegado!!!";
