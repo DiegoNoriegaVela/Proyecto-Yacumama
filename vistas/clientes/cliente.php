@@ -83,119 +83,54 @@
   <div class="page-content" id="home">
 
 
-    <div class="row " style="height: 250px;">
-      <img class="img-responsive" src="./img/fondo.jpg">
+    <div style="height: 250px;">
+      <img class="img-fluid" style="max-width:100%; height:800px;" src="./img/fondo.jpg">
     </div>
 
-    <div class="white row-col">
+    <div class="light row-col">
       <div class="row-cell p-y-lg">
         <div class="container p-y-lg text-primary-hover">
-          <h1 class="display-3 _700 l-s-n-3x m-t-lg m-b-md text-white">Proyecto <span class="text-success">Yacumama</span></h1>
-          <h5 class=" m-b-lg text-white">Simulación control de<span class="label orange-800">pedidos</span> de la empresa(restaurante) Yacumama S.A.</h5>
-          <h5 class=" m-b-lg text-white">Administración de platillos, pedidos y personal</h5>
+          <h1 class="display-3 _700 l-s-n-3x m-t-lg m-b-md text-white">Recreo Turístico <span class="text-success">Yacumama</span></h1>
+          <h5 class=" m-b-lg text-white">Proyecto de simulación control de pedidos de la empresa(restaurante) Yacumama S.A.</h5>
+          <h5 class=" m-b-lg text-white"><span class="label orange-800">Iniciar Sesión:</span>Pantallas de personal: administración de personal, platos y pedidos.</h5>
         </div>
       </div>
     </div>
 
-    <div ui-view="" class="white ng-scope" style="">
+    <div class="p-y-lg light">
+      <div class="container p-y-lg text-primary-hover">
+        <h2 class=" _700 l-s-n-1x m-b-md">Sobre <span class="text-success">Nosotros</span></h2>
+        <h5 class="m-y-lg text-muted">Yacumama, es una empresa turística pionera en el valle del Alto Mayo, con una extensión de 25 hectáreas, posee maravillosos paisajes y ambientes especialmente acondicionados para que disfrutes de la naturaleza en todo su explendor. En Yacumama puedes realizar diversas actividades: camping, paseos en bote motor, darte un refrescante baño en un río de aguas cristalinas, pesca deportiva, degustar exquisitos platos y bebidas de la región, etc.</h5>
+      </div>
+    </div>
+
+
+
+    <div class="white ng-scope">
       <div class="padding ng-scop p-y-lg">
           <div class="container p-y-lg">
-            <h5 class="display-4 _700 l-s-n-3x">Carta</h5>
-            <h5 class="text-muted">Administración de platillos, pedidos y personal</h5>
+          <h2 class=" _700 l-s-n-1x m-b-md">Platillos <span class="text-success">Típicos</span></h2>
+            <h5 class="text-muted">Contamos con un restaurante turístico que goza de gran aceptación por parte de los clientes locales como de los visitantes que vienen de fuera. Nuestra especialidad es la comida regional y las parrillas.</h5>
           </div>
 
 
         <div class="row">
           <div class="container">
             <div class="row">
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c1.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Skyline collection</div>
+
+              <?php foreach ($this->platos->Listar() as $plato) : ?>
+                <div class="col-xs-6 col-sm-4 col-md-6">
+                  <div class="box p-a-xs">
+                    <img src="./img/imgplatos/<?=$plato->plato_img?>" alt="" class="img-responsive">
+                    <div class="p-a-sm">
+                      <h5 class="display-5 _400 l-s-n-1x"><?=$plato->plato_nombre?></h5>
+                      <div class="text-muted"><?=$plato->plato_descripcion?></div>
+                      <div class="text-muted">S/.<?=$plato->plato_precio?></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c2.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Morbi nec nunc condimentum</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c3.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Vestibulum ullamcorper sodales nisi</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c4.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Lorem ipsum dolor sit amet</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c0.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Donec eleifend condimentum nisl eu consectetur.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c6.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Duis non malesuada est</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c0.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Mauris convallis mauris at pellentesque</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c7.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Donec eleifend</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c8.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Vestibulum ullamcorper sodales</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c0.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Dapibus porta</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="box p-a-xs">
-                  <a href="#"><img src="./assets/images/c9.jpg" alt="" class="img-responsive"></a>
-                  <div class="p-a-sm">
-                    <div class="text-ellipsis">Phasellus at ultricies neque,</div>
-                  </div>
-                </div>
-              </div>
+              <?php endforeach;?>
+ 
             </div>
           </div>
         </div>
@@ -204,9 +139,9 @@
 
 
 
-    <div class="p-y-lg">
+    <div class="p-y-lg light">
       <div class="container p-y-lg text-primary-hover">
-        <h2 class=" _700 l-s-n-1x m-b-md">Integrantes <span class="text-primary">Grupo 8</span></h2>
+        <h2 class=" _700 l-s-n-1x m-b-md">Integrantes <span class="text-success">Grupo 8</span></h2>
         <h5 class="m-y-lg text-muted text-center">Noriega Vela, Diego</h5>
         <h5 class="m-y-lg text-muted text-center">Quintanilla Jaimes, Sebastian Yimmy</h5>
         <h5 class="m-y-lg text-muted text-center">Salvatierra Flores, Brayan Raúl</h5>

@@ -3,7 +3,7 @@
         <div class="padding">
 
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                     <div class="box">
                         <div class="box-header">
                             <h2>Platos Yacumama</h2>
@@ -21,7 +21,11 @@
                             <tbody>
                                 <?php foreach ($this->platos->Listar() as $plato) : ?>
                                     <tr>
-                                        <td><img src="img/imgplatos/<?=$plato->plato_img?>"></td>
+                                        <td>
+                                            <div class="col-md">
+                                                    <img class="img-responsive" src="img/imgplatos/<?=$plato->plato_img?>">
+                                            </div>
+                                        </td>
                                         <td><?php echo $plato->plato_id ?></td>
                                         <td><?php echo $plato->plato_nombre ?></td>
                                         <td><?php echo $plato->plato_descripcion ?></td>

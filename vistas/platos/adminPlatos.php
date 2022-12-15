@@ -22,7 +22,11 @@
                             <tbody>
                                 <?php foreach ($this->platos->Listar() as $plato) : ?>
                                     <tr>
-                                        <td><img src="img/imgplatos/<?=$plato->plato_img?>"></td>
+                                        <td>
+                                            <div class="col-md">
+                                                    <img class="img-responsive" src="img/imgplatos/<?=$plato->plato_img?>">
+                                            </div>
+                                        </td>
                                         <td><?php echo $plato->plato_id ?></td>
                                         <td><?php echo $plato->plato_nombre ?></td>
                                         <td><?php echo $plato->plato_descripcion ?></td>
