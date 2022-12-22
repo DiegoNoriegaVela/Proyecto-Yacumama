@@ -8,7 +8,3 @@
 - Se implementó en instancia gratuita EC2 de AWS. Máquina virtual Ubuntu Server 18.04LTS.
 - Dominio gratutito registrado para pruebas en freenom.com: yacumama.ml
 - Vesta Control Panel para instalación de APACHE + MySQL.
-
-## Autor
-
-- [@DiegoNoriegaVela](https://www.github.com/DiegoNoriegaVela)
